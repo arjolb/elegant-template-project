@@ -1,0 +1,84 @@
+.site-footer{
+    background: $footerBgColor;
+    color: #fff;
+    text-align: center;
+
+    &-links{
+        max-width: 265px;
+        margin: auto;
+        margin-bottom: 4.68rem;
+        ul{
+            list-style: none;
+            @include clearfix;
+        }
+        li{
+            float: left;
+            padding-right: 30px;
+            position: relative;
+            top: 4px;
+        }
+        li:first-child{
+            top: 8px;
+        }
+        li:nth-child(4){
+            top: 7px;
+        }
+        li:last-child{
+            top: 12px;
+        }
+    }
+
+    &-form{
+        // display: flex;
+        // width: 670px;
+        // margin: auto;
+        // justify-content: space-between;
+        // margin-bottom: 4.68rem;
+        display: flex;
+        width: 670px;
+        margin: auto;
+        flex-direction: column;
+        
+        &-inputs{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4.68rem;
+        input{
+           width: 300px;
+           outline: none;
+           border: none;
+           padding-bottom: 1.25rem;
+           padding-left: 1.68rem;
+           color: #676767;
+           font-size: 1.125rem;
+           border-bottom: 2px solid #afafaf;
+           background: #222;
+        }
+    }
+
+        &-message{
+            display: flex;
+            textarea{
+                width: 100%;
+                outline: none;
+                border: none;
+                padding-left: 1.68rem;
+                color: #676767;
+                font-size: 1.8rem;
+                border-bottom: 2px solid #afafaf;
+                background: #222;
+                resize: none;
+            }
+        }
+    }
+
+        &-btn{
+            padding: 1.1rem 3.4rem;
+            outline: none;
+            border: 3px solid #ffffff;
+            font-size: 1.5rem;
+            background: inherit;
+            color: #ffffff;
+            margin-top: 4.68rem;
+        }
+}

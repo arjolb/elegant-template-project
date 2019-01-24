@@ -1,0 +1,19 @@
+@mixin clearfix {
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+
+  @mixin atLarge {
+    @media (min-width:1600px){
+      @content;
+    }
+  }
+  
+  @mixin atLarge-high-dpi {
+    @media(min-width: 3000px){
+      @content;
+    }
+  }

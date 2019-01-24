@@ -12,8 +12,9 @@ autoprefixer=require('gulp-autoprefixer');
         .pipe(wait(200))
         .pipe(sass())
         .pipe(autoprefixer())
-        .on("error",function(errorInfo){
-            console.log(errorInfo.toString());
+        .on("error",function(error){
+            console.log(error.toString());
+            this.emit('end')
         })
         .pipe(gulp.dest("./app/css"));
     });

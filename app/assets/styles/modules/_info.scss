@@ -1,0 +1,23 @@
+.info{
+    background: url('../assets/images/page-info-1.jpg');
+    background-size: cover;
+    padding-top: 4.375rem;
+    color: #fff;
+
+    &-sidebar-one{
+        padding-top: 6.25rem;
+        max-width: 100%;
+        &_title{
+            text-transform: uppercase;
+            font-size: 2.8125rem;
+        }
+        &_description{
+            font-size: 1.375rem;
+            line-height: 1.6;
+            max-width: 75%;
+        }
+    }
+    &-sidebar-two{
+        
+    }
+}

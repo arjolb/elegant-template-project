@@ -1,0 +1,99 @@
+.our-work{
+    padding: 7.5rem 0 8.125rem 0;
+    margin: 0 auto;
+
+&-nav{
+    max-width: 645px;
+    margin: auto;
+    text-align: center;
+    &_title{
+        h1{
+            font-size: 2.1875rem;
+            color: $blackColor;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+    }
+
+    &_underline{
+        width: 86px;
+        height: 2px;
+        background: #222222;
+        margin: 4.68rem auto;
+    }
+
+    &_categories{
+        margin: auto;
+        text-align: center;
+        ul{
+            list-style: none;
+            @include clearfix;
+        }
+        li{
+            float: left;
+            padding-right: 2.3rem;
+        }
+        li:last-child{
+            padding-right: 0;
+        }
+        a{
+            color: $grayColor;
+            font-size: 1.1875rem;
+        }
+    }
+}
+
+    &-gallery{
+        padding: 5.3125rem 0;
+        display: flex;
+        flex-direction: column;
+        &_lg-4{
+            margin-bottom: 10px;
+            display: flex;
+            // justify-content: space-between;
+            flex: 1;
+        }
+
+        &_photo{
+            width: 30%;
+            margin-right: 30px;
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-btn{
+        display: block;
+        padding: 20px 150px;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: 300;
+        outline: none;
+        border: 3px solid $blackColor;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        &:hover{
+            background-color: #222222;
+            color: #fff;
+        }
+    }
+
+    &-clients{
+        padding: 11.875rem 0 8.125rem 0;
+
+        &_title{
+            text-align: center;
+            font-size: 2.1875rem;
+            font-weight: 900;
+        }
+        &_icons{
+            display: flex;
+            justify-content: space-between;
+            >div{
+                flex-basis: 15%;
+            }
+        }
+    }
+}

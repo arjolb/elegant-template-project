@@ -1,0 +1,35 @@
+#ourServices{
+    position: relative;
+}
+.our-services{
+    display: flex;
+    justify-content: space-between;
+    >div{
+        text-align: center;
+        flex-basis: 31%;
+        h1{
+            padding: 3.125rem 0 2.1875rem 0;
+            font-size: 1.5rem;
+        }
+        p{
+            line-height: 1.6;
+        }
+    }
+    &-item-2{
+        transform: translateY(-16px);
+    }
+    &-item-3{
+        transform: translateY(16px);
+    }
+
+
+    &_dot{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        background: $skillsBarColor;
+        border-radius: 50%;
+    }
+}

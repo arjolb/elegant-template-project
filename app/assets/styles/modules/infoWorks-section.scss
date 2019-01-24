@@ -1,0 +1,24 @@
+.info-works{
+    background: url('../assets/images/page-info-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5.25rem 12.61rem;
+    color: #fff;
+    @include clearfix;
+    @include atLarge{
+        padding: 6.25rem 17.8125rem;
+    }
+    >div{
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    h1:first-child{
+        font-size: 3.75rem;
+        font-weight: 100;
+    }
+    h1:nth-child(2){
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+}

@@ -1,1 +1,16 @@
+@import 'base/variables';
 @import 'base/_global';
+@import 'base/mixins';
+@import 'modules/hero-section';
+@import 'modules/wrapper';
+@import 'modules/page-section';
+@import 'modules/aboutUs-section';
+@import 'modules/info';
+@import 'modules/row';
+@import 'modules/ourWork-section';
+@import 'modules/testimonials-section';
+@import 'modules/ourServices-section.scss';
+@import 'modules/infoWorks-section.scss';
+@import 'modules/ourSkills-section';
+@import 'modules/site-footer';
+@import 'modules/top';

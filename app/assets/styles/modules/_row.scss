@@ -1,0 +1,17 @@
+.row{
+    @include clearfix;
+    &-gutters{
+        margin-right: -1.875rem;
+    }
+    &-gutters>div{
+        padding-right: 1.875rem;
+    }
+    &_lg-8{
+        width: 66.662%;
+        float: left;
+    }
+    &_lg-4{
+        width: 33.332%;
+        float: left;
+    }
+}

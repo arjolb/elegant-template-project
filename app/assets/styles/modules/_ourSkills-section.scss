@@ -1,0 +1,47 @@
+.our-skills{
+    &-lg_6{
+        display: flex;
+        >div{
+            margin-right: 4.6rem;
+        }
+        &-col{
+            h2{
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 1.43rem;
+                line-height: 1.6;
+            }
+            h4{
+                margin-bottom: 8px;
+            }
+            .bar-1{
+                width: 550px;
+                height: 14px;
+                background: $skillsBarColor;
+                border-radius: 20px;
+                margin-bottom: 1.75rem;
+            }
+            .bar-2{
+                @extend .bar-1;
+                width: 560px;
+            }
+            .bar-3{
+                @extend .bar-1;
+                width: 490px;
+            }
+            .bar-4{
+                @extend .bar-1;
+                width: 440px;
+            }
+            .bar-5{
+                @extend .bar-1;
+                width: 300px;
+            }
+        }
+    }
+}
