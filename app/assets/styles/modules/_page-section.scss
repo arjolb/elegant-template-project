@@ -1,4 +1,14 @@
 .page-section{
-    padding: 7.5rem 0;
-    margin: auto;
+    
+    @include atMedium{
+        padding: 3.6rem 0;
+    }
+    
+    @include atLarge{
+        padding: 7.5rem 0;
+    }
+
+    @include xLarge{
+        padding: 7.5rem 0;
+    }
 }

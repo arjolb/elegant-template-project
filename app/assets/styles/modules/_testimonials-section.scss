@@ -1,45 +1,123 @@
 .testimonials{
-    background: url('../assets/images/testimonial-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 8.125rem 0;
     color: #fff;
     position: relative;
 
+    @include atMedium{
+        background: url('../assets/images/testimonial-bg-medium.jpg');
+        @include backgroundProperties;
+        padding: 6rem 0;
+    }
+
+    @include atLarge{
+        background: url('../assets/images/testimonial-bg.jpg');
+        @include backgroundProperties;
+        padding: 8.125rem 0;
+    }
+
+    @include xLarge{
+        background: url('../assets/images/testimonial-bg.jpg');
+        @include backgroundProperties;
+        padding: 8.125rem 0;
+    }
+
     &_description{
-        max-width: 1168px;
         margin: auto;
+        
+        @include atMedium{
+            max-width: 500px;
+        }
+
+        @include atLarge{
+            max-width: 900px;
+        }
+
+        @include xLarge{
+            max-width: 1168px;
+        }
+
         p{
-            font-size: 2.1875rem;
+            
             text-align: center;
             line-height: 1.6;
+            @include atLarge{
+                font-size: 1.7rem;
+            }
+            @include xLarge{
+                font-size: 2.1875rem;
+            }
         }
     }
 
         &-dots_next{
             position: absolute;
-            bottom: 60px;
             left: 50%;
             width: 12px;
             height: 12px;
             background: #005494;
             border-radius: 50%;
             cursor: pointer;
+
+            @include atMedium{
+                bottom: 30px;
+            }
+
+            @include atLarge{
+                bottom: 60px;
+            }
+
+            @include xLarge{
+                bottom: 60px;
+            }
         }
 
         &-dots_prev{
             @extend .testimonials-dots_next;
-            left: 52%;
             background: #b7b7b7;
+
+            @include atMedium{
+                left: 54%;
+            }
+
+            @include atLarge{
+                left: 52%;
+            }
+
+            @include xLarge{
+                left: 52%;
+            }
         }
 
         &_title{
             position: absolute;
-            right: 215px;
-            bottom: 50px;
+            
+            @include atMedium{
+                right: 125px;
+                bottom: 20px;
+            }
+
+            @include atLarge{
+                right: 215px;
+                bottom: 50px;
+            }
+
+            @include xLarge{
+                right: 215px;
+                bottom: 50px;
+            }
             h2{
-                font-size: 1.3125rem;
                 font-weight: 900;
+                
+                @include atMedium{
+                    font-size: 1.1rem;
+                }
+
+                @include atLarge{
+                    font-size: 1.3125rem;
+                }
+
+                @include xLarge{
+                    font-size: 1.3125rem;
+                }
             }
         }
 }

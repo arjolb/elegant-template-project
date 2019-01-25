@@ -6,7 +6,19 @@
     }
   }
 
+  @mixin atMedium {
+    @media (min-width: 800px){
+      @content;
+    }
+  }
+
   @mixin atLarge {
+    @media (min-width:1060px){
+      @content;
+    }
+  }
+
+  @mixin xLarge {
     @media (min-width:1600px){
       @content;
     }
@@ -16,4 +28,9 @@
     @media(min-width: 3000px){
       @content;
     }
+  }
+
+  @mixin backgroundProperties {
+    background-size: cover;
+    background-repeat: no-repeat;
   }

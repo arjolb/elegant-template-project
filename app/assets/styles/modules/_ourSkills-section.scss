@@ -1,47 +1,152 @@
 .our-skills{
-    &-lg_6{
-        display: flex;
+
+
+    &-large_6{
+        @include atMedium{
+            display: flex;
+        }
+        
+        // @include atLarge{
+        //     display: flex;
+        // }
+        // @include xLarge{
+        // display: flex;
+        // }
         >div{
-            margin-right: 4.6rem;
+            flex: 1;
+            @include atLarge{
+                margin-right: 2rem;
+            }
+            @include xLarge{
+                margin-right: 4.6rem;
+            }
         }
         &-col{
             h2{
-                font-size: 1.6rem;
+                
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-weight: 600;
                 margin-bottom: 25px;
+
+                @include atMedium{
+                    font-size: 1rem;
+                }
+
+                @include atLarge{
+                    font-size: 1.2rem;
+                }
+
+                @include xLarge{
+                    font-size: 1.6rem;
+                }
+
             }
             p{
-                font-size: 1.43rem;
-                line-height: 1.6;
+                @include atMedium{
+                    font-size: 0.88rem;
+                    max-width: 85%;
+                }
+
+                @include atLarge{
+                    font-size: 1rem;
+                    max-width: 100%;
+                }
+
+                @include xLarge{
+                    font-size: 1.43rem;
+                    max-width: 100%;
+                }
             }
             h4{
-                margin-bottom: 8px;
+                @include atMedium{
+                    margin-bottom: 2px;
+                }
+
+                @include atLarge{
+                    margin-bottom: 8px;
+                }
+
+                @include xLarge{
+                    margin-bottom: 8px;
+                }
             }
-            .bar-1{
-                width: 550px;
-                height: 14px;
-                background: $skillsBarColor;
-                border-radius: 20px;
-                margin-bottom: 1.75rem;
-            }
-            .bar-2{
-                @extend .bar-1;
-                width: 560px;
-            }
-            .bar-3{
-                @extend .bar-1;
-                width: 490px;
-            }
-            .bar-4{
-                @extend .bar-1;
-                width: 440px;
-            }
-            .bar-5{
-                @extend .bar-1;
-                width: 300px;
-            }
+            
         }
+    }
+}
+
+
+.bar-1{
+    height: 14px;
+    background: $skillsBarColor;
+    border-radius: 20px;
+    margin-bottom: 1.75rem;
+
+    @include atMedium{
+        max-width: 350px;
+    }
+
+    @include atLarge{
+        max-width: 400px;
+    }
+    @include xLarge{
+        width: 550px;
+    }
+}
+.bar-2{
+    @extend .bar-1;
+
+    @include atMedium{
+        max-width: 400px;
+    }
+
+    @include atLarge{
+        max-width: 450px;
+    }
+    @include xLarge{
+        width: 560px;
+    }
+}
+.bar-3{
+    @extend .bar-1;
+
+    @include atMedium{
+        max-width: 340px;
+    }
+
+    @include atLarge{
+        max-width: 390px;
+    }
+    @include xLarge{
+        max-width: 490px;
+    }
+}
+.bar-4{
+    @extend .bar-1;
+
+    @include atMedium{
+        max-width: 290px;
+    }
+
+    @include atLarge{
+        width: 340px;
+    }
+    @include xLarge{
+        width: 440px;
+    }
+}
+.bar-5{
+    @extend .bar-1;
+
+    @include atMedium{
+        max-width: 150px;
+    }
+
+    @include atLarge{
+        width: 200px;
+    }
+    @include xLarge{
+        width: 300px;
     }
 }

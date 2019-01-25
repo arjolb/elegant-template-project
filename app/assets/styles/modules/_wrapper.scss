@@ -1,6 +1,14 @@
 .wrapper{
-    padding: 0 7.5rem;
+    @include atMedium{
+        padding: 0 3.4rem;
+    }
+
     @include atLarge{
+        padding: 0 7.5rem;
+    }
+
+    @include xLarge{
         padding: 0 13.4375rem;
     }
+    
 }

@@ -8,18 +8,19 @@
     text-align: center;
     &_title{
         h1{
-            font-size: 2.1875rem;
             color: $blackColor;
             text-transform: uppercase;
             font-weight: 900;
+            @include atMedium{
+                font-size: 1.87rem;
+            }
+            @include atLarge{
+                font-size: 2.1875rem;
+            }
+            @include xLarge{
+                font-size: 2.1875rem;
+            }
         }
-    }
-
-    &_underline{
-        width: 86px;
-        height: 2px;
-        background: #222222;
-        margin: 4.68rem auto;
     }
 
     &_categories{
@@ -32,13 +33,32 @@
         li{
             float: left;
             padding-right: 2.3rem;
+            @include atMedium{
+                padding-left: .6rem;
+            }
+            @include atLarge{
+                padding-left: 0;
+            }
+            @include xLarge{
+                padding-left: 0;
+            }
         }
         li:last-child{
             padding-right: 0;
         }
         a{
             color: $grayColor;
-            font-size: 1.1875rem;
+            @include atMedium{
+                font-size: 0.875rem;
+            }
+
+            @include atLarge{
+                font-size: 1.1875rem;
+            }
+
+            @include xLarge{
+                font-size: 1.1875rem;
+            }
         }
     }
 }
@@ -81,13 +101,34 @@
     }
 
     &-clients{
-        padding: 11.875rem 0 8.125rem 0;
-
-        &_title{
-            text-align: center;
-            font-size: 2.1875rem;
-            font-weight: 900;
+        
+        @include atMedium{
+            padding: 6.6rem 0 4rem 0;
         }
+
+        @include atLarge{
+            padding: 11.875rem 0 8.125rem 0;
+        }
+
+        @include xLarge{
+            padding: 11.875rem 0 8.125rem 0;
+        }
+        // &_title{
+        //     text-align: center;
+            
+        //     font-weight: 900;
+        //     @include atMedium{
+        //         font-size: 1.87rem;
+        //     }
+            
+        //     @include atLarge{
+        //         font-size: 2.1875rem;
+        //     }
+
+        //     @include xLarge{
+        //         font-size: 2.1875rem;
+        //     }
+        // }
         &_icons{
             display: flex;
             justify-content: space-between;

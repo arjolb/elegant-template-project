@@ -1,0 +1,40 @@
+.generic-content{
+    &_description{
+        line-height: 1.6;
+    }
+    &_underline{
+        width: 86px;
+        height: 2px;
+        background: $blackColor;
+        
+    
+        @include atMedium{
+            margin: 2.2rem auto;
+        }
+
+        @include atLarge{
+            margin: 4.375rem auto;
+        }
+
+        @include xLarge{
+            margin: 4.375rem auto;
+        }
+    }
+    
+    &_title{
+            text-align: center;
+            
+            font-weight: 900;
+            @include atMedium{
+                font-size: 1.87rem;
+            }
+            
+            @include atLarge{
+                font-size: 2.1875rem;
+            }
+
+            @include xLarge{
+                font-size: 2.1875rem;
+            }
+        }
+}

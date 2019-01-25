@@ -1,12 +1,25 @@
 .info-works{
-    background: url('../assets/images/page-info-2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5.25rem 12.61rem;
+    
+    
     color: #fff;
     @include clearfix;
+
+    @include atMedium{
+        padding: 5.25rem 1.8rem;
+        background: url('../assets/images/page-info-2-medium.jpg');
+        @include backgroundProperties;
+    }
+
     @include atLarge{
+        padding: 5.25rem 8.8rem;
+        background: url('../assets/images/page-info-2.jpg');
+        @include backgroundProperties;
+    }
+
+    @include xLarge{
         padding: 6.25rem 17.8125rem;
+        background: url('../assets/images/page-info-2.jpg');
+        @include backgroundProperties;
     }
     >div{
         float: left;
@@ -14,11 +27,27 @@
         text-align: center;
     }
     h1:first-child{
-        font-size: 3.75rem;
         font-weight: 100;
+        @include atMedium{
+            font-size: 1.4rem;
+        }
+        @include atLarge{
+            font-size: 2.4rem;
+        }
+        @include xLarge{
+            font-size: 3.75rem;
+        }
     }
     h1:nth-child(2){
-        font-size: 1.5rem;
-        font-weight: 800;
+        font-weight: 900;
+        @include atMedium{
+            font-size: 1rem;
+        }
+        @include atLarge{
+            font-size: 1.2rem;
+        }
+        @include xLarge{
+            font-size: 1.5rem;
+        }
     }
 }
