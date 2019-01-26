@@ -5,6 +5,9 @@
         bottom: 20px;
         right: 30px;
         cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border: 1px solid $grayColor;
 
         @include atMedium{
             width: 50px;
@@ -24,11 +27,12 @@
 
         i{
             border: solid $grayColor;
-            border-width: 0 3px 3px 0;
+            border-width: 0 1px 1px 0;
             display: inline-block;
             position: absolute;
             top: 38%;
             left: 35%;
+            padding: 3px;
 
             @include atMedium{
                 padding: 6px;

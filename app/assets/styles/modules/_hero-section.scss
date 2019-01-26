@@ -3,20 +3,23 @@
 }
 
 .hero-section{
-    
-    // background-image: url('../assets/images/hero--medium-i.jpg');
-    // background-image: url('../assets/images/hero--medium.jpg');
-    background-image: url('../assets/images/hero--small-i.jpg');
+    position: relative;
     color: #fffefe;
-    @include backgroundProperties;
+    
+        background-image: url('../assets/images/hero--small.jpg');
+        @include backgroundProperties;
+        padding: 2rem 0;
+    
 
     @include atMedium{
         background-image: url('../assets/images/hero--medium.jpg');
-        padding: 1.65rem;
+        @include backgroundProperties;
+        padding: 1.65rem 0;
     }
     
     @include atLarge{
         background-image: url('../assets/images/hero--large.jpg');
+        @include backgroundProperties;
         padding: 2.2rem 0;
     }
 
@@ -47,32 +50,59 @@
         top: 0px;
         left: 0;
         width: 15px;
-        height: 3px;
+        height: 2px;
         background: $barsColor;
+
+        @include atMedium{
+            height: 3px;
+        }
+
     }
     &_bar2{
         position: absolute;
-        top: 7px;
+        top: 5px;
         left: 0;
         width: 10px;
-        height: 3px;
+        height: 2px;
         background: $barsColor;
+
+        @include atMedium{
+            top: 7px;
+            height: 3px;
+        }
+
     }
     &_bar3{
         position: absolute;
-        top: 14px;
+        top: 10px;
         left: 0;
         width: 15px;
-        height: 3px;
+        height: 2px;
         background: $barsColor;
+
+        @include atMedium{
+            top: 14px;
+            height: 3px;
+        }
+
     }
     &_title{
         margin-top: -4px;
-        transform: translateX(4px);
         float: left;
+        transform: translateX(2px);
+
+        @include atMedium{
+            transform: translateX(4px);
+        }
+
         h1{
-            font-size: 1.4375rem;
+            font-size: 1rem;
             text-transform: uppercase;
+
+            @include atMedium{
+                font-size: 1.4375rem;
+            }
+
         }
     }
 
@@ -80,16 +110,44 @@
     /* Menu links */
 
     &_menu-links{
-        float: right;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width: 50%;
+        height: 100%;
+        padding-top: 5rem;
+        background: #012536;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -10;
+
+        @include atMedium{
+            float: right;
+            position: relative;
+            height: auto;
+            width: auto;
+            top: 0;
+            right: 0;
+            padding-top: 0;
+            background: none;
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+
         ul{
             list-style-type: none;
             @include clearfix;
         }
         li{
-            float: left;
-            
+            float: none;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-bottom: 1rem;
             @include atMedium{
+                float: left;
                 padding-right: 16px;
+                margin-bottom: 0;
             }
 
             @include atLarge{
@@ -106,7 +164,16 @@
         }
         a{
             color: #fffefe;
-            font-size: 0.88rem;
+            padding: 20px;
+            @include atSmall{
+                font-size: 0.6rem;
+                padding: 0;
+            }
+
+            @include atMedium{
+                font-size: 0.88rem;
+            }
+
             @include xLarge{
                 font-size: 1.1rem;
             }
@@ -116,13 +183,64 @@
         }
     }
 
+    &_menu-icon{
+    width: 20px;
+    height: 19px;
+    position: fixed;
+    z-index: 10;
+    top: 24px;
+    right: 10px;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: $barsColor;
+        transform-origin: 0 0;
+        transition: transform .3s ease-out;
+      }
+
+        &_middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $barsColor;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $barsColor;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+          }
+
+          @include atMedium{
+              display: none;
+          }
+    }
+
 
     /* Information-agency */
     &-info{
         text-align: center;
         margin: auto;
         position: relative;
-
+        max-width: 300px;
+        padding: 1rem 0 0 0;
+        
         @include atMedium{
             max-width: 520px;
             padding: 7.4rem 0 0 0;
@@ -141,6 +259,7 @@
         &_title{
             text-transform: uppercase;
             font-weight: 800;
+            font-size: 1rem;
 
             @include atMedium{
                 font-size: 2rem;
@@ -159,6 +278,7 @@
             width: 5.375rem;
             height: 2px;
             background: #fffefe;
+            margin: 1.3rem auto;
 
             @include atMedium{
                 margin: 1.75rem auto;
@@ -174,6 +294,8 @@
         }
 
         &_description{
+            font-size: .66rem;
+
             @include atMedium{
                 font-size: 1.1rem;
             }
@@ -191,12 +313,14 @@
     //Arrow
     &-arrow{
         
-        
         margin: auto;
         border-radius: 50%;
         position: relative;
         cursor: pointer;
-
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        margin-top: 1.4rem;
         @include atMedium{
             width: 50px;
             height: 50px;
@@ -222,11 +346,14 @@
             display: inline-block;
             position: absolute;
             top: 30%;
-            left: 35%;
-
+            left: 40%;
+            padding: 3px;
+            border-width: 0 1px 1px 0;
+            
             @include atMedium{
                 padding: 6px;
                 border-width: 0 2px 2px 0;
+                left: 35%;
             }
     
             @include atLarge{

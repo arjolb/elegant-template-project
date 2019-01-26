@@ -1,6 +1,5 @@
 .our-skills{
 
-
     &-large_6{
         @include atMedium{
             display: flex;
@@ -13,22 +12,25 @@
         // display: flex;
         // }
         >div{
-            flex: 1;
+            @include atMedium{
+                flex: 1;
+            }
+            
             @include atLarge{
                 margin-right: 2rem;
             }
+
             @include xLarge{
                 margin-right: 4.6rem;
             }
         }
         &-col{
             h2{
-                
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                font-weight: 600;
+                font-weight: 900;
                 margin-bottom: 25px;
-
+                font-size: 0.88em;
                 @include atMedium{
                     font-size: 1rem;
                 }
@@ -43,6 +45,8 @@
 
             }
             p{
+                font-size: 0.7rem;
+
                 @include atMedium{
                     font-size: 0.88rem;
                     max-width: 85%;
@@ -59,8 +63,12 @@
                 }
             }
             h4{
+                font-weight: 100;
+                font-size: 0.6rem;
+                margin-bottom: 0.4rem;
                 @include atMedium{
                     margin-bottom: 2px;
+                    font-size: 0.875rem;
                 }
 
                 @include atLarge{
@@ -72,6 +80,12 @@
                 }
             }
             
+        &-bottom-margin-at-small{
+            margin-bottom: 40px;
+            @include atMedium{
+                margin-bottom: 0;
+            }
+        }
         }
     }
 }
@@ -82,6 +96,7 @@
     background: $skillsBarColor;
     border-radius: 20px;
     margin-bottom: 1.75rem;
+    max-width: 300px;
 
     @include atMedium{
         max-width: 350px;
@@ -91,11 +106,12 @@
         max-width: 400px;
     }
     @include xLarge{
-        width: 550px;
+        max-width: 550px;
     }
 }
 .bar-2{
     @extend .bar-1;
+    max-width: 350px;
 
     @include atMedium{
         max-width: 400px;
@@ -105,14 +121,15 @@
         max-width: 450px;
     }
     @include xLarge{
-        width: 560px;
+        max-width: 560px;
     }
 }
 .bar-3{
     @extend .bar-1;
+    max-width: 290px;
 
     @include atMedium{
-        max-width: 340px;
+        max-max-width: 340px;
     }
 
     @include atLarge{
@@ -124,29 +141,31 @@
 }
 .bar-4{
     @extend .bar-1;
+    max-width: 240px;
 
     @include atMedium{
         max-width: 290px;
     }
 
     @include atLarge{
-        width: 340px;
+        max-width: 340px;
     }
     @include xLarge{
-        width: 440px;
+        max-width: 440px;
     }
 }
 .bar-5{
     @extend .bar-1;
+    max-width: 100px;
 
     @include atMedium{
         max-width: 150px;
     }
 
     @include atLarge{
-        width: 200px;
+        max-width: 200px;
     }
     @include xLarge{
-        width: 300px;
+        max-width: 300px;
     }
 }

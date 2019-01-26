@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/images/icons/title.ico" />
+    <!-- <link rel="shortcut icon" href="assets/images/icons/title.ico" /> -->
     <title>Elegant Theme</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
@@ -22,7 +22,12 @@
                    <div class="hero-section_title"><h1>legant</h1></div>
                 </div>
 
+                <div class="hero-section_menu-icon">
+                        <div class="hero-section_menu-icon_middle"></div>
+                </div>
                 <nav class="hero-section_menu-links">
+                    
+
                     <ul>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">ABOUT US</a></li>
@@ -63,7 +68,7 @@
 
 
     <section class="info">
-        <div class="wrapper">
+        <div class="wrapper wrapper-info-small">
             <div class="row row-gutters">
                 <div class="row_lg-8">
                     <div class="info-sidebar-one">
@@ -78,7 +83,10 @@
 
                 <div class="row_lg-4">
                     <div class="info-sidebar-two">
-                        <img src="./assets/images/iphone.jpg" alt="iphone">
+                        <picture>
+                            <source media="(max-width: 800px)" srcset="./assets/images/iphone-small.jpg">
+                            <img src="./assets/images/iphone.jpg" alt="iphone">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -89,8 +97,8 @@
 
     <section class="our-work">
         <div class="wrapper">
-            <div class="our-work-nav">
-                    <div class="our-work-nav_title">
+            <!-- <div class="our-work-nav"> -->
+                    <div class="our-work_title">
                             <h1>our work</h1>
                     </div>
                         <div class="generic-content_underline"></div>
@@ -104,23 +112,24 @@
                                     <li><a href="#">ILLUSTRATIONS</a></li>
                                 </ul>
                             </nav>
-            </div>
+            <!-- </div> -->
 
             <div class="our-work-gallery">
-                <div class="our-work-gallery_lg-4">
+                <!-- <div class="our-work-gallery_sm-4"> -->
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo1.jpg" alt="photo1"></div>
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo2.jpg" alt="photo2"></div>
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo3.jpg" alt="photo3"></div>
-                </div>
-                <div class="our-work-gallery_lg-4">
+                <!-- </div>
+                <div class="our-work-gallery_sm-4"> -->
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo4.jpg" alt="photo4"></div>
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo5.jpg" alt="photo5"></div>
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo6.jpg" alt="photo6"></div>
-                </div>
-                <div class="our-work-gallery_lg-4">
+                <!-- </div> -->
+                <!-- <div class="our-work-gallery_sm-4"> -->
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo7.jpg" alt="photo7"></div>
                     <div class="our-work-gallery_photo"><img src="./assets/images/photo8.jpg" alt="photo8"></div>
-                </div>
+                    <div class="our-work-gallery_photo our-work-gallery-empty"></div>
+                <!-- </div> -->
             </div>
 
             <button class="our-work-btn">MORE</button>
@@ -133,19 +142,19 @@
                 
                 <div class="our-work-clients_icons">
                     <div class="our-work-clients_icons-google">
-                        <a href="#"><img src="./assets/images/icons/google.svg" alt="google-icon"></a>
+                            <img src="./assets/images/google.gif" alt="google-icon">
                     </div>
                     <div class="our-work-clients_icons-samsung">
-                            <img src="./assets/images/icons/samsung.svg" alt="samsung-icon">
+                            <img src="./assets/images/samsung.gif" alt="samsung-icon">
                     </div>
                     <div class="our-work-clients_icons-flickr">
-                            <img src="./assets/images/icons/flickr.svg" alt="flickr-icon">
+                            <img src="./assets/images/flickr.gif" alt="flickr-icon">
                     </div>
                     <div class="our-work-clients_icons-foursquare">
-                            <img src="./assets/images/icons/foursquare.svg" alt="foursquare-icon">
+                            <img src="./assets/images/foursquare.gif" alt="foursquare-icon">
                     </div>
                     <div class="our-work-clients_icons-pininterest">
-                            <img src="./assets/images/icons/pininterest.svg" alt="pininterest-icon">
+                            <img src="./assets/images/piniterest.gif" alt="pininterest-icon">
                     </div>
                 </div>
 
@@ -156,7 +165,7 @@
 
 
     <div class="testimonials">
-        <div class="wrapper">
+        <div class="wrapper wrapper-testimonials-small">
                 <div class="testimonials_description">
                         <p>"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."</p>
                 </div>
@@ -199,9 +208,9 @@
                         ilabore et dolore.</p>
                     </div>
                 </div>
-                <div class="abc">
-                        <div class="our-services_dot"></div>
-                </div>
+              
+                <div class="our-services_dot"></div>
+                
         </div>
     </section>
 
@@ -242,7 +251,7 @@
                 <div class="generic-content_underline"></div>
 
                 <div class="our-skills-large_6">
-                    <div class="our-skills-large_6-col">
+                    <div class="our-skills-large_6-col our-skills-large_6-col-bottom-margin-at-small">
                         <h2>perfect layout & efficient coding</h2>
                         <p class="generic-content_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                             Velit, amet necessitatibus dolorem ipsa voluptatibus fugiat, 

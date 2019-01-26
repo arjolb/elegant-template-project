@@ -1,6 +1,9 @@
 .testimonials{
     color: #fff;
     position: relative;
+    background: url('../assets/images/testimonial-bg-small.jpg');
+    @include backgroundProperties;
+    padding: 5rem 0;
 
     @include atMedium{
         background: url('../assets/images/testimonial-bg-medium.jpg');
@@ -22,7 +25,8 @@
 
     &_description{
         margin: auto;
-        
+        max-width: 340px;
+
         @include atMedium{
             max-width: 500px;
         }
@@ -39,6 +43,8 @@
             
             text-align: center;
             line-height: 1.6;
+            font-size: 0.8rem;
+
             @include atLarge{
                 font-size: 1.7rem;
             }
@@ -50,15 +56,17 @@
 
         &-dots_next{
             position: absolute;
-            left: 50%;
+            left: 43%;
             width: 12px;
             height: 12px;
             background: #005494;
             border-radius: 50%;
             cursor: pointer;
+            bottom: 40px;
 
             @include atMedium{
                 bottom: 30px;
+                left: 50%;
             }
 
             @include atLarge{
@@ -73,7 +81,7 @@
         &-dots_prev{
             @extend .testimonials-dots_next;
             background: #b7b7b7;
-
+            left: 49%;
             @include atMedium{
                 left: 54%;
             }
@@ -89,7 +97,9 @@
 
         &_title{
             position: absolute;
-            
+            right: 35px;
+            bottom: 35px;
+
             @include atMedium{
                 right: 125px;
                 bottom: 20px;
@@ -106,7 +116,7 @@
             }
             h2{
                 font-weight: 900;
-                
+                font-size: 1rem;
                 @include atMedium{
                     font-size: 1.1rem;
                 }

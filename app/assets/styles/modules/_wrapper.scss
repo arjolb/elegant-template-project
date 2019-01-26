@@ -1,4 +1,8 @@
 .wrapper{
+
+    padding: 0 1.3rem;
+    
+
     @include atMedium{
         padding: 0 3.4rem;
     }
@@ -11,4 +15,13 @@
         padding: 0 13.4375rem;
     }
     
+    &-info-small{
+        @media (max-width: 760px){
+            padding: 0 2.2rem;
+        }
+    }
+
+    &-testimonials-small{
+        padding: 0 2rem;
+    }
 }

@@ -4,6 +4,7 @@
         text-transform: uppercase;
         text-align: center;
         font-weight: bold;
+        font-size: 1.1rem;
 
         @include atMedium{
             font-size: 1.65rem;
@@ -22,9 +23,11 @@
     &_description{
         
         margin: auto;
-        text-align: center;
-
+        max-width: 400px;
+        font-size: 0.68rem;
+        padding: 0 1.5rem;
         @include atMedium{
+            padding: 0;
             max-width: 660px;
             font-size: 0.8rem;
         }

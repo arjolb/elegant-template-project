@@ -1,6 +1,9 @@
 .info{
     color: #fff;
-    
+    padding-top: 1rem;
+
+    background: url('../assets/images/page-info-1-small.jpg');
+    @include backgroundProperties;
 
     @include atMedium{
         background: url('../assets/images/page-info-1-medium.jpg');
@@ -21,11 +24,22 @@
     }
 
     &-sidebar-one{
-        padding-top: 6.25rem;
+
+        padding-top: 1.1rem;
+       
+        @include atMedium{
+            padding-top: 6.25rem;
+        }
         
         &_title{
             text-transform: uppercase;
             font-weight: 900;
+            font-size: .7rem;
+
+            @include atMedium{
+                font-size: 2rem;
+            }
+
             @include atLarge{
                 font-size: 2.47rem;
             }
@@ -34,15 +48,17 @@
             }
         }
         &_description{
-            margin-top: 1.125rem;
+            margin-top: 0.7rem;
             font-weight: 100;
+            font-size: 0.5rem;
+            max-width: 95%;
 
             @include atMedium{
                 max-width: 80%;
+                font-size: 1rem;
             }
 
             @include atLarge{
-                max-width: 80%;
                 font-size: 1.175rem;
             }
             @include xLarge{
@@ -53,7 +69,11 @@
     }
     &-sidebar-two{
         img{
-            border-radius: 36px 36px 0 0;
+            display: block;
+            border-radius: 20px 20px 0 0;
+            @include atMedium{
+                border-radius: 36px 36px 0 0;
+            }
         }
     }
 }

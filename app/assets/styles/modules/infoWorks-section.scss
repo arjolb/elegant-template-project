@@ -4,6 +4,10 @@
     color: #fff;
     @include clearfix;
 
+    padding: 3rem 0.8rem;
+    background: url('../assets/images/page-info-2-small.jpg');
+    @include backgroundProperties;
+
     @include atMedium{
         padding: 5.25rem 1.8rem;
         background: url('../assets/images/page-info-2-medium.jpg');
@@ -28,18 +32,23 @@
     }
     h1:first-child{
         font-weight: 100;
+        font-size: 1.1rem;
+        
         @include atMedium{
             font-size: 1.4rem;
         }
         @include atLarge{
             font-size: 2.4rem;
         }
+
         @include xLarge{
             font-size: 3.75rem;
         }
+
     }
     h1:nth-child(2){
         font-weight: 900;
+        font-size: 0.6rem;
         @include atMedium{
             font-size: 1rem;
         }

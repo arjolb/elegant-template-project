@@ -35,16 +35,25 @@
         // justify-content: space-between;
         // margin-bottom: 4.68rem;
         display: flex;
-        width: 670px;
+        width: 300px;
         margin: auto;
         flex-direction: column;
         
+        @include atMedium{
+            width: 670px;
+        }
+
         &-inputs{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-bottom: 4.68rem;
+
+            @include atMedium{
+                justify-content: space-between;
+            }
+
         input{
-           width: 300px;
+           width: 130px;
            outline: none;
            border: none;
            padding-bottom: 1.25rem;
@@ -53,11 +62,15 @@
            font-size: 1.125rem;
            border-bottom: 2px solid #afafaf;
            background: #222;
+
+           @include atMedium{
+               width: 300px;
+           }
         }
     }
 
         &-message{
-            display: flex;
+            
             textarea{
                 width: 100%;
                 outline: none;
@@ -73,12 +86,17 @@
     }
 
         &-btn{
-            padding: 1.1rem 3.4rem;
+            padding: 0.8rem 1.3rem;
+            margin-top: 2rem;
             outline: none;
             border: 3px solid #ffffff;
             font-size: 1.5rem;
             background: inherit;
             color: #ffffff;
-            margin-top: 4.68rem;
+        
+            @include atMedium{
+                padding: 1.1rem 3.4rem;
+                margin-top: 4.68rem;
+            }
         }
 }
