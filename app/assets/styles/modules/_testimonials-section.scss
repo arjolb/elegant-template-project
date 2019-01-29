@@ -54,7 +54,11 @@
         }
     }
 
-        &-dots_next{
+    &_description-second{
+        @extend .testimonials_description;
+    }
+
+        &-dots_prev{
             position: absolute;
             left: 43%;
             width: 12px;
@@ -78,8 +82,8 @@
             }
         }
 
-        &-dots_prev{
-            @extend .testimonials-dots_next;
+        &-dots_next{
+            @extend .testimonials-dots_prev;
             background: #b7b7b7;
             left: 49%;
             @include atMedium{

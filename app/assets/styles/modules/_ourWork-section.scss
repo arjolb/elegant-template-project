@@ -56,6 +56,9 @@
         }
         li{
             float: left;
+            @media (max-width:325px) {
+                padding-right: 0.3;
+            }
             padding-right: 0.6rem;
             @include atMedium{
                 padding-left: .6rem;
@@ -67,7 +70,11 @@
         }
         a{
             color: $grayColor;
-            font-size: 0.4rem;
+            @media (max-width:325px) {
+                font-size: .3rem;
+            }
+
+            font-size: 0.5rem;
             
 
             @include atMedium{
@@ -98,6 +105,7 @@
         }
 
         &_photo{
+            position: relative;
             flex-basis: 48%;
             margin-bottom: 1rem;
 
@@ -109,11 +117,40 @@
             img{
                 cursor: pointer;
             }
+
+            &-overlay{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity .5s ease-out;
+                div{
+                    text-align: center;
+                    @include atMedium{
+                        transform: translateY(150%);
+                    }
+                }
+                h2{
+                    font-size: 1.375rem;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-hide-initially{
+                display: none;
+            }
         }
+        
         &-empty{
             display: none;
             @include atMedium{
                 display: block;
+                z-index: -10;
+                visibility: hidden;
             }
         }
     }

@@ -81,6 +81,7 @@
                 border-bottom: 2px solid #afafaf;
                 background: #222;
                 resize: none;
+                overflow: auto;//Remove Scrollbar in IE
             }
         }
     }
@@ -91,7 +92,8 @@
             outline: none;
             border: 3px solid #ffffff;
             font-size: 1.5rem;
-            background: inherit;
+            background: #222;
+            cursor: pointer;
             color: #ffffff;
         
             @include atMedium{

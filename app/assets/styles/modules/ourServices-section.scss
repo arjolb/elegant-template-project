@@ -1,5 +1,6 @@
 #ourServices{
     position: relative;
+    overflow: hidden;
 }
 .our-services{
     @include clearfix;
