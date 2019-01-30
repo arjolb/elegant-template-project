@@ -3,27 +3,11 @@ import $ from 'jquery';
 const smoothScroll=require('jquery-smooth-scroll');
 class SmoothScrollDelayLink{
     constructor(){
-        this.navLinks=$(".hero-section_menu-links a");
-        // this.delayLink();
-        this.smoothScrolling();
+        $(".hero-section_menu-links a").smoothScroll();
+        $(".hero-section-arrow a").smoothScroll();
         $(".arrow-smooth a").smoothScroll();
     }
 
-    // delayLink(){
-    //     this.navLinks.click(function(evt){
-    //         evt.preventDefault();
-    //         var link = $(this).attr("href");
-    //         setTimeout(function() {
-    //             window.location.href = link;
-    //         }, 700);
-    //     });
-    // }    
-
-    smoothScrolling(){
-        this.navLinks.smoothScroll();
-    }
-
-    
 }
 
 export default SmoothScrollDelayLink;

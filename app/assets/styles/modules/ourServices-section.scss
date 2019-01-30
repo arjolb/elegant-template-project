@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
 }
-.our-services{
+ .our-services{
     @include clearfix;
     @include atMedium{
         display: flex;
@@ -34,16 +34,16 @@
             }
         }
     }
-    &-item-2{
-        @include atMedium{
-            transform: translateY(-16px);
-        }
-    }
-    &-item-3{
-        @include atMedium{
-            transform: translateY(16px);
-        }
-    }
+    // &-item-2{
+    //     @include atMedium{
+    //         transform: translateY(-16px);
+    //     }
+    // }
+    // &-item-3{
+    //     @include atMedium{
+    //         transform: translateY(16px);
+    //     }
+    // }
 
 
     &_dot{
@@ -61,3 +61,59 @@
 
     }
 }
+
+// .our-services{
+//      @include clearfix;
+//     >div{
+//         text-align: center;
+//         float: left;
+//         margin-bottom: 55px;
+
+//         @include atMedium{
+//             width: 33%;
+//         }
+
+//         h1{
+//             padding: 1.7rem 0 .8rem 0;
+//             font-size: 1rem;
+//             @include atMedium{
+//             padding: 3.125rem 0 2.1875rem 0;
+//             font-size: 1.5rem;
+//             }
+
+//         }
+//         p{
+//             font-size: 0.88rem;
+//             line-height: 1.6;
+//             @include atMedium{
+//                 font-size: 1rem;
+//             }
+//         }
+//     }
+//     &-item-2{
+//         @include atMedium{
+//             transform: translateY(-16px);
+//         }
+//     }
+//     &-item-3{
+//         @include atMedium{
+//             transform: translateY(16px);
+//         }
+//     }
+
+
+//     &_dot{
+//         position: absolute;
+//         bottom: 40px;
+//         left: 50%;
+//         width: 12px;
+//         height: 12px;
+//         background: $skillsBarColor;
+//         border-radius: 50%;
+
+//         @include atMedium{
+//             bottom: 50px;
+//         }
+
+//     }
+// }

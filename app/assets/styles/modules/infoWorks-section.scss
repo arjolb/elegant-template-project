@@ -4,26 +4,34 @@
     color: #fff;
     @include clearfix;
 
-    padding: 3rem 0.8rem;
-    background: url('../assets/images/page-info-2-small.jpg');
-    @include backgroundProperties;
+    &.lazyloaded{
+        background: url('../assets/images/page-info-2-small.jpg');
+        @include backgroundProperties;
+    }
+    padding: 3rem 0.8rem;    
 
     @include atMedium{
+        &.lazyloaded{
+            background: url('../assets/images/page-info-2-medium.jpg');
+            @include backgroundProperties;
+        }
         padding: 5.25rem 1.8rem;
-        background: url('../assets/images/page-info-2-medium.jpg');
-        @include backgroundProperties;
     }
 
     @include atLarge{
+        &.lazyloaded{
+            background: url('../assets/images/page-info-2.jpg');
+            @include backgroundProperties;
+        }
         padding: 5.25rem 8.8rem;
-        background: url('../assets/images/page-info-2.jpg');
-        @include backgroundProperties;
     }
 
     @include xLarge{
+        &.lazyloaded{
+            background: url('../assets/images/page-info-2.jpg');
+            @include backgroundProperties;
+        }
         padding: 6.25rem 17.8125rem;
-        background: url('../assets/images/page-info-2.jpg');
-        @include backgroundProperties;
     }
     >div{
         float: left;

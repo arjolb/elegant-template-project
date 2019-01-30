@@ -1,26 +1,34 @@
 .testimonials{
     color: #fff;
     position: relative;
-    background: url('../assets/images/testimonial-bg-small.jpg');
-    @include backgroundProperties;
     padding: 5rem 0;
+    &.lazyloaded{
+        background: url('../assets/images/testimonial-bg-small.jpg');
+        @include backgroundProperties;
+    }
 
     @include atMedium{
-        background: url('../assets/images/testimonial-bg-medium.jpg');
-        @include backgroundProperties;
         padding: 6rem 0;
+        &.lazyloaded{
+            background: url('../assets/images/testimonial-bg-medium.jpg');
+            @include backgroundProperties;
+        }
     }
 
     @include atLarge{
-        background: url('../assets/images/testimonial-bg.jpg');
-        @include backgroundProperties;
         padding: 8.125rem 0;
+        &.lazyloaded{
+            background: url('../assets/images/testimonial-bg.jpg');
+            @include backgroundProperties;
+        }
     }
 
     @include xLarge{
-        background: url('../assets/images/testimonial-bg.jpg');
-        @include backgroundProperties;
         padding: 8.125rem 0;
+        &.lazyloaded{
+            background: url('../assets/images/testimonial-bg.jpg');
+            @include backgroundProperties;
+        }
     }
 
     &_description{

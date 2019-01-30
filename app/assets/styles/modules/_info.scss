@@ -2,24 +2,32 @@
     color: #fff;
     padding-top: 1rem;
 
-    background: url('../assets/images/page-info-1-small.jpg');
-    @include backgroundProperties;
+    &.lazyloaded{
+        background: url('../assets/images/page-info-1-small.jpg');
+        @include backgroundProperties;
+    }
 
     @include atMedium{
-        background: url('../assets/images/page-info-1-medium.jpg');
-        @include backgroundProperties;
+        &.lazyloaded{
+            background: url('../assets/images/page-info-1-medium.jpg');
+            @include backgroundProperties;
+        }
         padding-top: 2rem;
     }
 
     @include atLarge{
-        background: url('../assets/images/page-info-1.jpg');
-        @include backgroundProperties;
+        &.lazyloaded{
+            background: url('../assets/images/page-info-1.jpg');
+            @include backgroundProperties;
+        }
         padding-top: 4.375rem;
     }
 
     @include xLarge{
-        background: url('../assets/images/page-info-1.jpg');
-        @include backgroundProperties;
+        &.lazyloaded{
+            background: url('../assets/images/page-info-1.jpg');
+            @include backgroundProperties;
+        }
         padding-top: 4.375rem;
     }
 

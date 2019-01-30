@@ -6,7 +6,9 @@ wait=require('gulp-wait'),
 autoprefixer=require('gulp-autoprefixer');
 svgSprite=require('gulp-svg-sprite'),
 rename=require('gulp-rename'),
-webpack=require('webpack');
+webpack=require('webpack'),
+svg2png=require('gulp-svg2png'),
+modernizr=require('gulp-modernizr');
 
 /* Styles */
 
@@ -31,7 +33,7 @@ webpack=require('webpack');
 
 
 /* Scripts */
-    gulp.task('scripts',function(callback){
+    gulp.task('scripts',['modernizr'],function(callback){
         webpack(require('./webpack.config.js'),function(error,stats){
             if(error){
                 console.log(error.toString());
@@ -45,6 +47,35 @@ webpack=require('webpack');
         browserSync.reload();
     });
 /* Scripts end */
+
+
+
+
+/* Png to svg */
+
+    gulp.task("PngCopy",function(){
+       return gulp.src("./app/assets/images/icons/*.svg")
+        .pipe(svg2png())
+        .pipe(gulp.dest("./app/assets/images/pngfallback"));
+    })
+
+/* */
+
+
+
+
+/* Modernizr */
+
+    gulp.task('modernizr',function(){
+        return gulp.src(['./app/assets/styles/**/*.scss','./app/assets/scripts/**/*.js'])
+        .pipe(modernizr({
+            "options":["setClasses"]
+        }))
+        .pipe(gulp.dest('./app/scripts'));
+    });
+
+/*modernizr end */
+
 
 
 

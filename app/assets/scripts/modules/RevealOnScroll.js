@@ -34,6 +34,12 @@ class RevealOnScroll{
                element: currentItem,
                handler: function () { 
                     that.itemsToReveal.addClass("reveal-item-is-visible");
+                    $(".our-services-item-2").css({
+                        "transform":"translateY(-16px)"
+                    });
+                    $(".our-services-item-3").css({
+                        "transform":"translateY(16px)"
+                    });
              },
              offset: "65%"
             });
