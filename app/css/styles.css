@@ -1,6 +1,8 @@
 html {
   background: #f4f4f4;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
 
 * {
   margin: 0;
@@ -718,7 +720,8 @@ a {
 .testimonials {
   color: #fff;
   position: relative;
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  min-height: 88px; }
   .testimonials.lazyloaded {
     background: url("../assets/images/testimonial-bg-small.jpg");
     background-size: cover;
@@ -830,39 +833,38 @@ a {
   position: relative;
   overflow: hidden; }
 
-.our-services::after {
+.flexbox .our-services::after {
   content: "";
   clear: both;
   display: table; }
 
 @media (min-width: 760px) {
-  .our-services {
+  .flexbox .our-services {
     display: flex;
     justify-content: space-between; } }
 
-.our-services > div {
+.flexbox .our-services > div {
   text-align: center;
-  width: 100%;
   float: left;
-  margin-bottom: 55px; }
+  margin: 0 0 55px 0; }
   @media (min-width: 760px) {
-    .our-services > div {
+    .flexbox .our-services > div {
       flex-basis: 31%; } }
-  .our-services > div h1 {
+  .flexbox .our-services > div h1 {
     padding: 1.7rem 0 .8rem 0;
     font-size: 1rem; }
     @media (min-width: 760px) {
-      .our-services > div h1 {
+      .flexbox .our-services > div h1 {
         padding: 3.125rem 0 2.1875rem 0;
         font-size: 1.5rem; } }
-  .our-services > div p {
+  .flexbox .our-services > div p {
     font-size: 0.88rem;
     line-height: 1.6; }
     @media (min-width: 760px) {
-      .our-services > div p {
+      .flexbox .our-services > div p {
         font-size: 1rem; } }
 
-.our-services_dot {
+.flexbox .our-services_dot {
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -871,8 +873,22 @@ a {
   background: #005494;
   border-radius: 50%; }
   @media (min-width: 760px) {
-    .our-services_dot {
+    .flexbox .our-services_dot {
       bottom: 50px; } }
+
+.our-services::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.our-services > div {
+  text-align: center;
+  float: left;
+  margin-bottom: 55px;
+  margin-right: 20px; }
+  @media (min-width: 760px) {
+    .our-services > div {
+      width: 30%; } }
 
 .info-works {
   color: #fff;

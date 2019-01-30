@@ -5,6 +5,9 @@ import BarsAnimation from './BarsAnimation';
 
 class RevealOnScroll{
     constructor(barInfo,firstOffset,skillsBar,secondOffset){
+        this.lazyImages=$(".lazyload");
+    
+
         this.barsObject=new BarsAnimation();
 
         this.itemsToReveal=$(".our-services-item");
@@ -18,10 +21,18 @@ class RevealOnScroll{
 
         this.hideInitially();
         this.createWayPoints();
+        this.refreshWayPoints();
     }
 
     hideInitially(){
         this.itemsToReveal.addClass("reveal-item");
+    }
+
+
+    refreshWayPoints(){
+        this.lazyImages.on('load',function() { 
+            Waypoint.refreshAll();
+         });
     }
 
 
@@ -41,7 +52,7 @@ class RevealOnScroll{
                         "transform":"translateY(16px)"
                     });
              },
-             offset: "65%"
+             offset: "50%"
             });
          });
 

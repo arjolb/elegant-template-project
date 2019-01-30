@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 new SmoothScroll();
 new ToTheTop();
-new RevealOnScroll($(".info-works"),"80%",$(".our-skills"),"50%");
+new RevealOnScroll($(".info-works"),"60%",$(".our-skills"),"40%");
 new TestimonialSlide();
 new PortfolioGallery();
 new MobileMenu();

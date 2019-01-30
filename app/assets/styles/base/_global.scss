@@ -1,6 +1,7 @@
 html{
     background: #f4f4f4;
     scroll-behavior: smooth;
+    backface-visibility: hidden;
 }
 *{
     margin: 0;

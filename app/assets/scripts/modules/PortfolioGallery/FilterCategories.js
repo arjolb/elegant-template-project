@@ -11,6 +11,8 @@ class PortfolioGallery{
 
 
     filterCategory(){
+        var that=this;
+
         let cssProperties={
             "color":"#222",
             "font-weight":"900"
@@ -33,7 +35,9 @@ class PortfolioGallery{
 
             if(category=='all'){
                 $('.our-work-gallery_photo').fadeIn(800); //.removeClass('hidden')
+                that.btn.show();
             }else{
+                that.btn.hide();
                 $('.our-work-gallery_photo').each(function(){
                     if (!$(this).hasClass(category)) {
                         $(this).hide(); //.addClass('hidden')
